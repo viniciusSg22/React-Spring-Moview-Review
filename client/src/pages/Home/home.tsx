@@ -1,7 +1,8 @@
+import Pagination from "components/Pagination/pagination";
 import React from "react";
 
 const Home = () => {
-  return <h1>Home Page</h1>;
+  return <Pagination />;
 };
 
 export default Home;
