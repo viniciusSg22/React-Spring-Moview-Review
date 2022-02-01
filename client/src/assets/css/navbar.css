@@ -5,25 +5,27 @@ header {
   align-items: center;
 }
 
-.dsmovie-nav-content {
+.vstech-nav-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: #fff;
 }
 
-.dsmovie-nav-content h1 {
+.vstech-nav-content h1 {
   font-size: 24px;
   margin: 0;
   font-weight: 700;
 }
 
-.dsmovie-contact-container {
+.vstech-contact-container {
   display: flex;
   align-items: center;
 }
 
-.dsmovie-contact-link {
+.vstech-contact-link {
   margin: 0 0 0 10px;
-  font-size: 12px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
 }
