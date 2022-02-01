@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactComponent as GithubIcon } from "assets/img/github.svg";
-import "assets/css/navbar.css";
+import "components/Navbar/navbar.css";
 
 const Navbar = () => {
   return (
