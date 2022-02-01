@@ -12,20 +12,20 @@ const Review = () => {
   };
 
   return (
-    <div className="vstech-form-container">
+    <div className="form-container">
       <img
-        className="vstech-movie-card-image"
+        className="movie-card-image"
         src={movie.image}
         alt={movie.title}
       />
-      <div className="vstech-card-bottom-container">
+      <div className="card-bottom-container">
         <h3>{movie.title}</h3>
-        <form className="vstech-form">
-          <div className="form-group dsmovie-form-group">
+        <form className="form">
+          <div className="form-group form-group">
             <label htmlFor="email">Informe seu email</label>
             <input type="email" className="form-control" id="email" />
           </div>
-          <div className="form-group dsmovie-form-group">
+          <div className="form-group form-group">
             <label htmlFor="score">Informe sua avaliação</label>
             <select className="form-control" id="score">
               <option>1</option>
@@ -35,13 +35,13 @@ const Review = () => {
               <option>5</option>
             </select>
           </div>
-          <div className="vstech-form-btn-container">
-            <button type="submit" className="btn btn-primary vstech-btn">
+          <div className="form-btn-container">
+            <button type="submit" className="btn btn-primary btn">
               Salvar
             </button>
           </div>
         </form>
-        <button className="btn btn-primary vstech-btn mt-3">Cancelar</button>
+        <button className="btn btn-primary btn mt-3">Cancelar</button>
       </div>
     </div>
   );

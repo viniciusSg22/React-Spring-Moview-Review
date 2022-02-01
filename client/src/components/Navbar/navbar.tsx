@@ -6,16 +6,16 @@ const Navbar = () => {
   return (
     <header>
       <nav className="container">
-        <div className="vstech-nav-content">
+        <div className="nav-content">
           <h1>vsTech Movies Review</h1>
           <a
             href="https://github.com/viniciusSg22"
             target="_blank"
             rel="noreferrer"
           >
-            <div className="vstech-contact-container">
+            <div className="contact-container">
               <GithubIcon />
-              <p className="vstech-contact-link">Vinícius Sanches Geniselli</p>
+              <p className="contact-link">Vinícius Sanches Geniselli</p>
             </div>
           </a>
         </div>
