@@ -1,5 +1,6 @@
 import React from "react";
 import "pages/Review/review.css";
+import { Link } from "react-router-dom";
 
 const Review = () => {
   const movie = {
@@ -13,11 +14,7 @@ const Review = () => {
 
   return (
     <div className="form-container">
-      <img
-        className="movie-card-image"
-        src={movie.image}
-        alt={movie.title}
-      />
+      <img className="movie-card-image" src={movie.image} alt={movie.title} />
       <div className="card-bottom-container">
         <h3>{movie.title}</h3>
         <form className="form">
@@ -41,7 +38,9 @@ const Review = () => {
             </button>
           </div>
         </form>
-        <button className="btn btn-primary btn mt-3">Cancelar</button>
+        <Link to="/">
+          <button className="btn btn-primary btn mt-3">Cancelar</button>
+        </Link>
       </div>
     </div>
   );
