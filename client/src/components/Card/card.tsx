@@ -13,7 +13,7 @@ const Card = ({ movie }: Props) => {
       <img className="movie-card-image" src={movie.image} alt={movie.title} />
       <div className="card-bottom-container">
         <h3>{movie.title}</h3>
-        <Score />
+        <Score count={movie.count} score={movie.score} />
         <Link to={`review/${movie.id}`}>
           <div className="btn btn-primary btn">Avaliar</div>
         </Link>

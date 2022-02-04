@@ -4,14 +4,49 @@ import { ReactComponent as HalfStar } from "assets/img/HalfStar.svg";
 import { ReactComponent as EmptyStar } from "assets/img/EmptyStar.svg";
 import "components/Stars/stars.css";
 
-const Stars = () => {
+type Props = {
+  score: number;
+};
+
+type StarProps = {
+  fill: number;
+};
+
+function getFills(score: number) {
+  const fills = [0, 0, 0, 0, 0];
+  const integerPart = Math.floor(score);
+
+  for (let i = 0; i < integerPart; i++) {
+    fills[i] = 1;
+  }
+
+  const diff = score - integerPart;
+  if (diff > 0) {
+    fills[integerPart] = 0.5;
+  }
+
+  return fills;
+}
+function Star({ fill }: StarProps) {
+  if (fill === 0) {
+    return <EmptyStar />;
+  } else if (fill === 1) {
+    return <FullStar />;
+  } else {
+    return <HalfStar />;
+  }
+}
+
+const Stars = ({ score }: Props) => {
+  const fills = getFills(score);
+
   return (
     <div className="stars-container">
-      <FullStar />
-      <FullStar />
-      <FullStar />
-      <HalfStar />
-      <EmptyStar />
+      <Star fill={fills[0]} />
+      <Star fill={fills[1]} />
+      <Star fill={fills[2]} />
+      <Star fill={fills[3]} />
+      <Star fill={fills[4]} />
     </div>
   );
 };
