@@ -1,8 +1,16 @@
+import axios from "axios";
 import Card from "components/Card/card";
 import Pagination from "components/Pagination/pagination";
-import React from "react";
+import React, { useEffect } from "react";
+import { BASE_URL } from "utils/requests";
 
 const Home = () => {
+  useEffect(() => {
+    axios.get(`${BASE_URL}/movies`).then((response) => {
+      console.log(response.data);
+    });
+  }, []);
+
   return (
     <div>
       <Pagination />
