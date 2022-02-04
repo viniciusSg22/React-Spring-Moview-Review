@@ -6,7 +6,7 @@ type Props = {
   score: number;
   count: number;
 };
-const Score = ({ score, count } : Props) => {
+const Score = ({ score, count }: Props) => {
   return (
     <div className="score-container">
       <p className="score-value">{score > 0 ? score.toFixed(1) : "-"}</p>

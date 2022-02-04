@@ -1,16 +1,30 @@
 import React from "react";
 import { ReactComponent as ArrowLeft } from "assets/img/arrowLeft.svg";
 import "components/Pagination/pagination.css";
+import { MoviePage } from "types/movie";
 
-const Pagination = () => {
+type Props = {
+  page: MoviePage;
+  onChange: Function;
+};
+
+const Pagination = ({ page, onChange }: Props) => {
   return (
     <div className="pagination-container">
       <div className="pagination-box">
-        <button className="pagination-button" disabled={true}>
+        <button
+          className="pagination-button"
+          disabled={page.first}
+          onClick={() => onChange(page.number - 1)}
+        >
           <ArrowLeft />
         </button>
-        <p>{`${1} de ${3}`}</p>
-        <button className="pagination-button" disabled={false}>
+        <p>{`${page.number + 1} de ${page.totalPages}`}</p>
+        <button
+          className="pagination-button"
+          disabled={page.last}
+          onClick={() => onChange(page.number + 1)}
+        >
           <ArrowLeft className="flip-horizontal" />
         </button>
       </div>
